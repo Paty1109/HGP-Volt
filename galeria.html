@@ -1,16 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galeria - HGP Volt</title>
+    <link rel="icon" href="images/hgplogo.jpeg" type="image/x-icon">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="css/style.css"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
     
+    <div class="offcanvas offcanvas-start bg-light" tabindex="-1" id="offcanvasFiltro" aria-labelledby="offcanvasFiltroLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasFiltroLabel">Filtrar Veículos</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        
+        <nav id="filtro-lateral">
+            <h5 class="mb-3 text-dark border-bottom pb-2">Filtrar por Categoria</h5>
+            <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                    <a class="nav-link btn btn-outline-dark text-start w-100 filter-btn" href="#" data-filter="all">Mostrar Todos</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link btn btn-outline-primary text-start w-100 filter-btn" href="#" data-filter="SUV">SUV</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link btn btn-outline-primary text-start w-100 filter-btn" href="#" data-filter="SEDAN">SEDAN</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link btn btn-outline-primary text-start w-100 filter-btn" href="#" data-filter="HATCH">HATCH</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </div>
+    
     <header class="bg-dark text-white py-3">
-        <div class="container">
+        <div class="container d-flex justify-content-between align-items-center">
+            
+            <button class="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFiltro" aria-controls="offcanvasFiltro">
+                Filtros
+            </button>
+             
+            <h1>HGP Volt - Galeria</h1>
             <nav>
                 <a href="index.html" class="btn btn-primary">Voltar para a Home</a>
             </nav>
@@ -18,15 +57,208 @@
     </header>
 
     <main class="container my-5">
-        <h1>Galeria de Veículos HGP Volt</h1>
-        <p>Esta é a página da Galeria, onde você pode ver nossos carros em detalhes.</p>
         
-        </main>
+        <h2 class="text-center mb-4">Veículos em Destaque</h2>
+        <p class="text-center lead mb-5">Explore a qualidade e o design de cada carro do nosso estoque.</p>
+        
+        <div class="row">
+            <div class="col-12">
+                
+                <div class="galeria-grid" id="galeria-veiculos">
+                    
+                    <div class="galeria-item" data-categoria="SUV">
+                        <img src="images/t-cross.webp" alt="Volkswagen T-Cross (SUV).">
+                        <div class="galeria-info">
+                            <h5>Volkswagen T-Cross</h5>
+                            <p>SUV - 2024</p>
+                        </div>
+                    </div>
+                    
+                    <div class="galeria-item" data-categoria="HATCH">
+                        <img src="images/golfgti.jpg" alt="Volkswagen Golf GTI (Hatch).">
+                        <div class="galeria-info">
+                            <h5>Volkswagen Golf GTI</h5>
+                            <p>Hatch Esportivo - 2020</p>
+                        </div>
+                    </div>
 
-    <footer class="bg-light text-center py-3">
-        <p>&copy; 2025 HGP Volt. Galeria.</p>
-    </footer>
+                    <div class="galeria-item" data-categoria="SEDAN">
+                        <img src="images/jetta.avif" alt="Volkswagen Jetta (Sedan)." >
+                        <div class="galeria-info">
+                            <h5>Volkswagen Jetta GLI</h5>
+                            <p>Sedan Premium - 2023</p>
+                        </div>
+                    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+                    <div class="galeria-item" data-categoria="SEDAN">
+                        <img src="images/corolla2024.jpg" alt="Toyota Corolla (Sedan).">
+                        <div class="galeria-info">
+                            <h5>Toyota Corolla</h5>
+                            <p>SEDAN - 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="galeria-item" data-categoria="SUV">
+                        <img src="images/creta2024.webp" alt="Hyundai Creta (SUV).">
+                        <div class="galeria-info">
+                            <h5>Hyundai Creta</h5>
+                            <p>SUV - 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="galeria-item" data-categoria="SEDAN">
+                        <img src="images/fusion2024.webp" alt="Ford Fusion (Sedan).">
+                        <div class="galeria-info">
+                            <h5>Ford Fusion</h5>
+                            <p>SEDAN - 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="galeria-item" data-categoria="HATCH">
+                        <img src="images/hb202024.webp" alt="Hyundai Hb20 (Hatch).">
+                        <div class="galeria-info">
+                            <h5>Hyundai Hb20</h5>
+                            <p>HATCH - 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="galeria-item" data-categoria="SUV">
+                        <img src="images/hrv.png" alt="Honda Hr-v (SUV).">
+                        <div class="galeria-info">
+                            <h5>Honda Hr-v</h5>
+                            <p>SUV - 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="galeria-item" data-categoria="SEDAN">
+                        <img src="images/civic2024.webp" alt="Honda Civic (Sedan).">
+                        <div class="galeria-info">
+                            <h5>Honda Civic </h5>
+                            <p>SEDAN - 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="galeria-item" data-categoria="SEDAN">
+                        <img src="images/conos2024.webp" alt="Fiat Cronos (Sedan).">
+                        <div class="galeria-info">
+                            <h5>Fiat Cronos</h5>
+                            <p>SEDAN - 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="galeria-item" data-categoria="HATCH">
+                        <img src="images/onix2024.png" alt="Chevrolet Onix (Hatch).">
+                        <div class="galeria-info">
+                            <h5>Chevrolet Onix</h5>
+                            <p>HATCH - 2024</p>
+                        </div>
+                    </div>
+
+                    <div class="galeria-item" data-categoria="HATCH">
+                        <img src="images/fit2023.jpg" alt="Honda Fit (Hatch).">
+                        <div class="galeria-info">
+                            <h5>Honda Fit</h5>
+                            <p>HATCH - 2023</p>
+                        </div>
+                    </div>
+
+                    <div class="galeria-item" data-categoria="SUV">
+                        <img src="images/compass2025.png" alt="Jeep Compass (SUV).">
+                        <div class="galeria-info">
+                            <h5>Jeep Compass</h5>
+                            <p>SUV - 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="galeria-item" data-categoria="SUV">
+                        <img src="images/nivus.jpg" alt="VolksWagen Nivus (SUV).">
+                        <div class="galeria-info">
+                            <h5>VolksWagen Nivus</h5>
+                            <p>SUV - 2025</p>
+                        </div>
+                    </div>
+
+                    <div class="galeria-item" data-categoria="HATCH">
+                        <img src="images/argo2024.webp" alt="Fiat Argo (Hatch).">
+                        <div class="galeria-info">
+                            <h5>Fiat Argo</h5>
+                            <p>HATCH - 2024</p>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+
+  <footer id="Rodape" class="bg-dark text-white py-4">
+    <div class="container">
+      
+      <div class="row mb-3">
+        <div class="col-12 text-center">
+          <p class="mb-0">&copy; 2025 HGP Volt. Todos os direitos reservados.</p>
+        </div>
+      </div>
+
+      <div class="row mb-4 pt-3 border-top border-secondary">
+        <div class="col-12 text-center">
+          <h6 class="text-white mb-1">Turma:INF1F</h6>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <h6 class="text-center mb-3">Desenvolvedores:</h6>
+        
+        <div class="col-md-4 col-12 text-center">
+          <p class="text-secondary mb-1">Gisely Ribeiro de Melo 10</p>
+        </div>
+        
+        <div class="col-md-4 col-12 text-center">
+          <p class="text-secondary mb-1">Heloiza Corrêa Cabral 14</p>
+        </div>
+        
+        <div class="col-md-4 col-12 text-center">
+          <p class="text-secondary mb-1">Patrícia Félix Coelho 30</p>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.galeria-item');
+            const offcanvasElement = document.getElementById('offcanvasFiltro');
+            const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const filter = button.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        const category = item.getAttribute('data-categoria');
+                        
+                        if (filter === 'all' || category === filter) {
+                            item.style.display = 'block'; // Mostra o item
+                        } else {
+                            item.style.display = 'none'; // Esconde o item
+                        }
+                    });
+
+                    // Fecha o Offcanvas após a seleção do filtro (melhora a UX)
+                    if (offcanvas) {
+                        offcanvas.hide();
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
