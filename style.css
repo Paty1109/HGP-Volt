@@ -110,6 +110,55 @@ p {
     margin-top: 20px; 
 }
 
+.sobre-container {
+  background: linear-gradient(160deg, #1b1b1b, #111);
+  color: #ccc;
+  border-left: 5px solid #161616;
+  border-radius: 15px;
+  transition: all 0.4s ease;
+}
+
+.sobre-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(44, 44, 43, 0.25);
+}
+
+.linha-decorativa {
+  width: 80px;
+  height: 4px;
+  background-color: #161616;
+  border-radius: 2px;
+}
+
+.sobre-container h2 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.sobre-imagem {
+  max-width: 90%;
+  border: 3px solid rgba(56, 55, 53, 0.2);
+  transition: all 0.3s ease;
+}
+
+.sobre-imagem:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(54, 54, 54, 0.4);
+}
+
+.sobre-container p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.texto-final p {
+  font-size: 1.1rem;
+  color: #f8f9fa;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+
 /* ---------------------------------------------------- */
 /*
     ESTILOS ESPECÍFICOS DA GALERIA (PÁGINA galeria.html)
